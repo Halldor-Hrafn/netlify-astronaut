@@ -32,6 +32,13 @@ const { title, metaContent } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: #13151A;
 		background-size: 224px;
+
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	html::-webkit-scrollbar {
+		background: transparent;
+		width: 0;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
