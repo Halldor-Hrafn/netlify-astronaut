@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<div class="grid-container">
+  <div class="div-item" id="one">
+    1
+  </div>
+  <div class="div-item" id="two">
+    2
+  </div>
+  <div class="div-item" id="three">
+    3
+  </div>
+  <div class="div-item" id="four">
+    4
+  </div>
+</div>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    height: 70%;
+    box-sizing: border-box;
+  }
+
+  .grid-container > div {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		border-radius: 8px;
+		color: white;
+		background-color: #23262d;
+		opacity: 0.8;
+	}
+
+  .div-item {
+    list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: #23262d;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 7px;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+</style>

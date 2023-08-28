@@ -1,0 +1,51 @@
+<nav id="navbar">
+  <ul>
+    <li>
+      <a href="/about">About me</a>
+    </li>
+    <li>
+      <a href="/site">Website</a>
+    </li>
+    <li>
+      <a href="/games">Games</a>
+    </li>
+    <li>
+      <a href="/social">Socials</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #23262d;
+    color: white;
+  }
+
+  #navbar li {
+    border-right: 1px solid white;
+    display: inline-block;
+    padding: 5px;
+  }
+
+  #navbar li:last-child {
+    border-right: none;
+  }
+
+  #navbar li a {
+    padding: 2px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+  }
+
+  #navbar li a:is(:hover, :focus-within) {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

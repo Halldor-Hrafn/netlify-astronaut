@@ -1,10 +1,33 @@
+<!-- ---
+import { Octokit, App } from "octokit";
+
+const octokit = new Octokit({ });
+
+const data: any = await octokit.request("GET /repos/{owner}/{repo}/commits", {
+	owner: "Halldor-Hrafn",
+	repo: "netlify-astronaut",
+});
+
+const commitsCount = data.data.length;
+
+const commitSha = data.data[0];
+
+console.log(commitSha);
+
+// const commit: any = await octokit.request("GET /repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head", {
+// 	owner: "Halldor-Hrafn",
+// 	repo: "netlify-astronaut",
+// 	commit_sha: "main",
+// });
+--- -->
+
 <li class="text-card">
   <div>
     <h2>Meta Stuff</h2>
     <p>Version: 0.0.2</p>
     <p>Last Updated: 23/08/2023</p>
     <p>Github Repo: <span class="text-gradient"><a href="https://github.com/Halldor-Hrafn/netlify-astronaut">here</a></span></p>
-    <p>Commits made: 3</p>
+    <p>Commits made: 5</p>
     <p>TOS: <a href="/tos"></a></p>
   </div>
 </li>
