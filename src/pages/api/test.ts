@@ -3,7 +3,8 @@ export async function post({ request }: { request: Request }) {
   const text = data.get('name');
   console.log(text);
 
-  return new Response(JSON.stringify(request), {
-    status: 200,
-  });
+  // these three fucking lines took like 2 hours of my life I'm never getting back
+  const url = new URL('/', 'http://localhost:3000');
+
+  return Response.redirect(url);
 }
