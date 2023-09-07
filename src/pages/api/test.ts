@@ -4,7 +4,7 @@ export async function post({ request }: { request: Request }) {
   console.log(text);
 
   // these three fucking lines took like 2 hours of my life I'm never getting back
-  const url = new URL('/', 'http://localhost:3000');
+  const url = new URL('/', 'https://dev.pottss.xyz');
 
   return Response.redirect(url);
 }
