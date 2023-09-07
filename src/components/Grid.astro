@@ -18,7 +18,10 @@ const { title, body } = Astro.props;
     3
   </div>
   <div class="div-item" id="four">
-    4
+    <form action="/api/test" method="post" data-netlify="true">
+      <label>Your name: <input type="text" name="name" id="name"></label>
+      <button type="submit">Sus</button>
+    </form>
   </div>
 </div>
 
