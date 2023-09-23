@@ -1,40 +1,28 @@
 ---
-import { Octokit, App } from "octokit";
-import { readFile } from "fs/promises";
+// import { Octokit, App } from "octokit";
+// import { readFile } from "fs/promises";
 
-const octokit = new Octokit({ auth: import.meta.env.GITHUB_TOKEN });
+// const octokit = new Octokit({ auth: import.meta.env.GITHUB_TOKEN });
 
-// I really don't like the fact that I use the `any` type here, but the documentation is shit
-const data: any = await octokit.request("GET /repos/{owner}/{repo}/commits", {
-	owner: "Halldor-Hrafn",
-	repo: "netlify-astronaut",
-});
-
-const commitsCount = data.data.length;
-
-const versionData = await readFile("./package.json", "utf-8");
-const version = JSON.parse(versionData).version;
-
-// const commitSha = data.data[0].sha;
-
-// console.log(commitSha);
-
-// const commit: any = await octokit.request("GET /repos/{owner}/{repo}/commits/{commit_sha}", {
+// // I really don't like the fact that I use the `any` type here, but the documentation is shit
+// const data: any = await octokit.request("GET /repos/{owner}/{repo}/commits", {
 // 	owner: "Halldor-Hrafn",
 // 	repo: "netlify-astronaut",
-// 	commit_sha: commitSha,
 // });
 
-// console.log(commit);
+// const commitsCount = data.data.length;
+
+// const versionData = await readFile("./package.json", "utf-8");
+// const version = JSON.parse(versionData).version;
 ---
 
 <li class="text-card">
   <div>
     <h2>Meta Stuff</h2>
-    <p>Version: {version}</p>
+    <p>Version: Not working currently</p>
     <p>Last Updated: Whenever I have the motivation</p>
     <p>Github Repo: <span class="text-gradient"><a href="https://github.com/Halldor-Hrafn/netlify-astronaut">here</a></span></p>
-    <p>Commits made: {commitsCount}</p>
+    <p>Commits made: Not working currently</p>
     <p>TOS: <span class="text-gradient"><a href="/tos">here</a></span></p>
   </div>
 </li>
