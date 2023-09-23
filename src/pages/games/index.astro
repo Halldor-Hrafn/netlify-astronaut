@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Article from "../../components/Article.astro";
+import Navbar from "../../components/Navbar.astro"
+
+const starfieldText = `
+  Starfield is one of the newer games that I have explored, as of writing, I am not far in the game, but I will of course continue to play more.
+  The game is very enjoyable if you like space exploration games.
+  Naturally, it is a game that takes up nearly 100GB of storage and costs nearly 70$, so if you are short on money and space, don't play this game.
+  Of course, I won't stop you, but certainly be aware of the problems that might arise with simply having the game within your possesion.
+  My teacher warned me to not play the game during the semester, because it can get quite addicting, I can see where he gets it, and I find it ironic
+  that I see his Discord status display "Playing: Starfield".
+  Not blaming him, the game is damn good.
+`
+---
+
+<Layout title="Games" metaContent="Some fun games that are amazing">
+  <Navbar />
+  <div id="animation-test">
+    <Article
+      title="Starfield"
+      body={starfieldText}
+      image="https://cdn.wccftech.com/wp-content/uploads/2022/02/Starfield-game-HD-scaled.jpg"
+      imageAlt="Image depicting the video game 'Starfield'"
+      more="I give the game an 8/10"
+    />
+  </div>
+</Layout>
+
+<style>
+  #animation-test {
+    width: 100%;
+    height: 100%;
+    animation: fadein 2s;
+  }
+
+  @keyframes fadein {
+    from {
+      transform: translate(0, 10%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+</style>
