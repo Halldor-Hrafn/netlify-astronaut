@@ -10,7 +10,13 @@
       <a href="/games">Games</a>
     </li>
     <li>
-      <a href="/social">Socials</a>
+      <a href="/social" id="debug">Socials</a>
+    </li>
+    <li>
+      <select id="language-selector">
+        <option value="en">English</option>
+        <option value="is">Íslenska</option>
+      </select>
     </li>
   </ul>
 </nav>
@@ -49,3 +55,31 @@
     -webkit-text-fill-color: transparent;
   }
 </style>
+
+<script>
+  let lang: string | null = localStorage.getItem("lang");
+
+  if (!lang) {
+    lang = 'en';
+    localStorage.setItem('lang', lang);
+  }
+
+  if (lang === 'is') {
+    let debug = document.querySelector("#debug");
+    debug!.textContent = "Félagsmiðlar";
+    console.log("is")
+  } else if (lang === 'en') {
+    let debug = document.querySelector("#debug");
+    debug!.textContent = "Socials";
+    console.log("en")
+  }
+
+  let languageSelector = document.querySelector("#language-selector") as HTMLSelectElement;
+  languageSelector.value = lang;
+  languageSelector.addEventListener("change", (e: Event) => {
+    const selectElement = e.target as HTMLSelectElement;
+    console.log(selectElement.value)
+    localStorage.setItem('lang', selectElement.value);
+    location.reload();
+  });
+</script>
