@@ -15,10 +15,12 @@ const { title, body, image, more } = Astro.props;
     <img src={image} alt="">
   </div>
   <div class="div-item" id="body">
-    {body}
+    <div id="text-box">
+      {body}
+    </div>
   </div>
   <div class="div-item" id="title">
-    {title}
+    <h1>{title}</h1>
   </div>
   <div class="div-item" id="more">
     {more}
@@ -78,5 +80,32 @@ const { title, body, image, more } = Astro.props;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  #body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #body #text-box {
+    margin: 3rem;
+  }
+
+  #title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #title h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  #more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
