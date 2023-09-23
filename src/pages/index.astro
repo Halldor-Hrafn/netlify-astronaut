@@ -4,6 +4,7 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Hell.", metaContent="Now go suck an egg">
+	<link rel="stylesheet" href="css/page/index.css">
 	<main>
 			<path
 				fill-rule="evenodd"
@@ -50,11 +51,16 @@ import Card from '../components/Card.astro';
 				title="Socials (not working yet)"
 				body="If you for some reason want to contact me"
 			/>
+			<Card 
+				href="/tos"
+				title="Terms of Service"
+				body="I will give you 0$ to check this page out"
+			/>
 		</ul>
 	</main>
 </Layout>
 
-<style>
+<!-- <style>
 	main {
 		margin: auto;
 		padding: 1rem;
@@ -111,4 +117,4 @@ import Card from '../components/Card.astro';
 		gap: 2rem;
 		padding: 0;
 	}
-</style>
+</style> -->
