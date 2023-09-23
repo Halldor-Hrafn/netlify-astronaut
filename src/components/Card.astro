@@ -8,7 +8,6 @@ interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<link rel="stylesheet" href="css/components/card.module.css">
 <li class="link-card">
 	<a href={href}>
 		<h2>
@@ -21,7 +20,7 @@ const { href, title, body } = Astro.props;
 	</a>
 </li>
 
-<!-- <style>
+<style>
 	.link-card {
 		list-style: none;
 		display: flex;
@@ -60,4 +59,4 @@ const { href, title, body } = Astro.props;
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
 	}
-</style> -->
+</style>
