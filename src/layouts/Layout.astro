@@ -16,11 +16,13 @@ const { title, metaContent } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- <link rel="stylesheet" href="css/layouts/layout.css"> -->
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
