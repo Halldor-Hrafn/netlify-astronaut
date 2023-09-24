@@ -1,16 +1,16 @@
 <nav id="navbar">
   <ul>
     <li>
-      <a href="/about">About me</a>
+      <a href="/about" id="about">About me</a>
     </li>
     <li>
-      <a href="/site">Website</a>
+      <a href="/site" id="site">Website</a>
     </li>
     <li>
-      <a href="/games">Games</a>
+      <a href="/games" id="games">Games</a>
     </li>
     <li>
-      <a href="/social" id="debug">Socials</a>
+      <a href="/social" id="social">Socials</a>
     </li>
     <li>
       <select id="language-selector">
@@ -65,13 +65,25 @@
   }
 
   if (lang === 'is') {
-    let debug = document.querySelector("#debug");
-    debug!.textContent = "Félagsmiðlar";
-    console.log("is")
+    let about = document.querySelector("#about");
+    let site = document.querySelector("#site");
+    let games = document.querySelector("#games");
+    let social = document.querySelector("#social");
+
+    about!.textContent = "Um mig";
+    site!.textContent = "Síðan";
+    games!.textContent = "Leikir";
+    social!.textContent = "Félagsmiðlar";
   } else if (lang === 'en') {
-    let debug = document.querySelector("#debug");
-    debug!.textContent = "Socials";
-    console.log("en")
+    let about = document.querySelector("#about");
+    let site = document.querySelector("#site");
+    let games = document.querySelector("#games");
+    let social = document.querySelector("#social");
+
+    about!.textContent = "About me";
+    site!.textContent = "Website";
+    games!.textContent = "Games";
+    social!.textContent = "Socials";
   }
 
   let languageSelector = document.querySelector("#language-selector") as HTMLSelectElement;
