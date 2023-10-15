@@ -108,4 +108,24 @@ const { title, body, image, more } = Astro.props;
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      height: auto;
+    }
+    #image {
+      grid-row: 1 / 2;
+    }
+    #body {
+      grid-row: 2 / 3;
+    }
+    #title {
+      grid-row: 3 / 4;
+    }
+    #more {
+      grid-row: 4 / 5;
+    }
+  }
 </style>
