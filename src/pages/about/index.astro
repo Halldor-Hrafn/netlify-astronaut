@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import TextCard from '../../components/TextCard.astro';
+import Navbar from '../../components/Navbar.astro';
 
 const whoAmIString = `
   My name is Halldór Hrafn Reynisson, I am a highschool student from Iceland.
@@ -25,6 +26,7 @@ const callToAction = `
 ---
 
 <Layout title="Welcome to About me.", metaContent="Now go suck a d-">
+	<Navbar />
 	<main>
 			<path
 				fill-rule="evenodd"

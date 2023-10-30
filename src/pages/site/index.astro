@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro'
 import TextCard from '../../components/TextCard.astro'
 import MetaTextCard from '../../components/MetaTextCard.astro'
+import Navbar from '../../components/Navbar.astro'
 
 const startText = `
   It all started at about 20:00 on the 22nd of August 2023. I was sitting in my room with a sore throat, and pondering to myself... I want to create a website.
@@ -30,6 +31,7 @@ const metaText = `
 ---
 
 <Layout title="Welcome to the place abandoned by god", metaContent="Have you sacrificed your newborn yet?">
+	<Navbar />
   <main>
     <path
       fill-rule="evenodd"
